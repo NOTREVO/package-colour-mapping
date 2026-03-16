@@ -28,7 +28,6 @@ colorMode(HSL);
 background(51); 
 text (mouseX + '  ,  ' + mouseY, mouseX-(windowWidth/2), mouseY-(windowHeight/2))
 
-
 //DRAW GRAPH
 noStroke();
 fill('white');
@@ -42,10 +41,9 @@ rect((windowWidth/2)-50, (windowHeight-100)/2, 50, 50) //BR
 rect(-(windowWidth/2), -(windowHeight/2), 50, 50); //TL
 rect((windowWidth/2)-50, -(windowHeight/2), 50, 50) //TR
 
-
 //------------------------------------------------------------------------- xx
 
-//COUNT THROUGH ROWS
+//CYCLE THROUGH ROWS THROUGH ROWS
 for (let currentRow=0; currentRow < csvLength; currentRow++){
     
     //FIND AND ISOLATE HSL
@@ -69,8 +67,7 @@ for (let currentRow=0; currentRow < csvLength; currentRow++){
     //DRAW NODES
     rect(Xpot, Ypot, 50, 50);
 
-    //------------------------------------------------------------------------- xx
-
+//------------------------------------------------------------------------- xx
 
     //WRITE CAPTION TEXT BY FINDING VALUES FORM DATA
     fill("white");
@@ -78,7 +75,6 @@ for (let currentRow=0; currentRow < csvLength; currentRow++){
     textFont(myFont);
     text(table.rows[currentRow].arr, Xpot-50, Ypot-50)
     text("X: " + Xpot + " Y: " + Ypot, Xpot - 50, Ypot-10)
-
 }
 
 }
